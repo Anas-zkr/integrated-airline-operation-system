@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int luggage(int total_cost,int type)
+int luggage(int type)
 {
     int carry_on,carry_on_limit,weight,weight_limit,price;
     string ticket;
@@ -99,7 +99,7 @@ int main()
     cout <<"4. First Class\n";
     cin >>ticket;
 
-   int total_price=luggage(650,ticket);
+   int total_price=luggage(ticket);
 
    cout <<endl<<total_price;
 
