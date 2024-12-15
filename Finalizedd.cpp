@@ -1123,3 +1123,392 @@ int luggage(int type)
             cout <<"\nYour luggage weighs more than the limit.\nOver weight fees will be charged per kilogram."<<endl;
             luggagecost=(weight-weight_limit)*35;
             cout <<"The cost_hour to pay for luggage is : $"<<luggagecost<<endl;
+           return luggagecost;
+        }
+        else
+        {
+            cout <<"\nYour luggage weighs with in the limits.\nYou dont need to pay any extra amount.\n"<<endl;
+        }
+        break;
+
+        case 2:
+        weight_limit=25;
+        if(weight>weight_limit)
+        {
+            cout <<"\nYour luggage weighs more than the limit.\nOver weight fees will be charged per kilogram."<<endl;
+            luggagecost=(weight-weight_limit)*50;
+            cout <<"The cost_hour to pay for luggage is : $"<<luggagecost<<endl;
+            return luggagecost;
+        }
+        else
+        {
+            cout <<"Your luggage weighs with in the limits.\nYou dont need to pay any extra amount.\n"<<endl;
+        }
+        break;
+
+        case 3:
+        weight_limit=30;
+        if(weight>weight_limit)
+        {
+            cout <<"\nYour luggage weighs more than the limit.\nOver weight fees will be charged per kilogram."<<endl;
+            luggagecost=(weight-weight_limit)*70;
+            cout <<"The cost_hour to pay for luggage is : $"<<luggagecost<<endl;
+               return luggagecost;
+        }
+        else
+        {
+            cout <<"Your luggage weighs with in the limits.\nYou dont need to pay any extra amount.\n"<<endl;
+            
+        }
+        break;
+
+        case 4:
+        weight_limit=35;
+        if(weight>weight_limit)
+        {
+            cout <<"\nYour luggage weighs more than the limit.\nOver weight fees will be charged per kilogram."<<endl;
+            luggagecost=(weight-weight_limit)*90;
+            cout <<"The cost_hour to pay for luggage is : $"<<luggagecost<<endl;
+            return luggagecost;
+
+        }
+        else
+        {
+            cout <<"Your luggage weighs with in the limits.\nYou don't need to pay any extra amount.\n"<<endl;
+        }
+        break;
+
+        default:
+        	
+        break;
+
+    }
+    }
+    else 
+    {
+        cout <<"\nYou are not allowed to carry that much laggage along with you (carry on)"<<endl;
+        cout <<"Please carry weight with in the limits.\n"<<endl;
+        
+    }
+    }
+    while(!(carry_on <=carry_on_limit));
+
+    return luggagecost;
+}
+void signp(string name,string password2,string conf_pass);
+//this function allows the user to login in his already created profile
+int prof(string user_name, int password) 
+    {int pass1=1234,pass2=5678,pass3=9012,pass4=3456;
+        
+        cout <<endl<<"Enter username"<<endl;
+         int id;
+        srand(time(0));
+        id =10000000+(rand()%9999999);
+        cout <<"\t";cin>>user_name;
+        string *a=&user_name;
+        if(user_name=="hamza" || user_name=="abdulrehman" || user_name=="mudassar" || user_name=="anas"){
+            if(user_name=="hamza"){
+            do{
+
+        		cout <<"Enter password"<<endl;
+        		cout <<"\t";cin >>password;
+        
+        
+                if(password==pass1){
+                    cout <<endl<<"Welcome back, Hamza! Ready for your next adventure?\n";
+    
+                    cout <<"Your travel ID is :"<<id<<endl;
+        
+            }
+            // already logged in users
+            else{
+                cout <<"Enter correct password.";
+            }
+            }while(password!=pass1);
+            }
+            if(user_name=="abdulrehman"){
+                do{
+                	
+        		cout <<"Enter password"<<endl;
+        		cout <<"\t";cin >>password;
+       
+        
+                if(password==pass2){
+                    cout <<endl<<"Welcome back, Abdul Rehman! Ready for your next adventure?\n";
+                    cout <<"Your travel ID is :"<<id<<endl;
+            }
+            else{
+                cout <<"Enter correct password.";
+            }
+            }while(password!=pass2);
+
+            }
+            if(user_name=="mudassar"){
+                do{
+                	
+        cout <<"Enter password"<<endl;
+        cout <<"\t";cin >>password;
+        
+        
+                if(password==pass3){
+                    cout <<endl<<"Welcome back, Mudassar! Ready for your next adventure?\n";
+                    cout <<"Your travel ID is :"<<id<<endl;
+
+            }
+            else{
+                cout <<"Enter correct password.";
+            }
+            }while(password!=pass3);
+
+            }
+            if(user_name=="anas"){
+                do{
+                	
+        cout <<"Enter password"<<endl;
+        cout <<"\t";cin >>password;
+        
+        
+                if(password==pass4){
+                    cout <<endl<<"Welcome back, Anas! Ready for your next adventure?\n";
+                    cout <<"Your travel ID is :"<<id<<endl;
+
+            }
+            else{
+                cout <<"Enter correct password.";
+            }
+            }while(password!=pass4);
+
+            }
+        }
+        
+        else{
+        	cout <<"Incorrect username.\n"<<"Please enter correct username.\n";
+            return prof(user_name,password);
+		}
+
+        return 0;
+    }
+
+//allows new users to create their profile
+
+void signp(string name,string password2,string conf_pass)
+ {
+    
+    cout<<"Please enter username to signup :"<<endl;
+    cin.ignore();
+    getline(cin,name);
+    
+
+    cout<<"Enter password : ";
+    cin>>password2;
+
+     do{
+    cout<<"Confirm Password : ";
+    cin>>conf_pass;
+
+    if (password2==conf_pass)
+    {
+        cout<<"You have sucessfully signed up to your account "<<endl;
+    }
+    else{
+        cout<<"Your entered a wrong password.Please enter again "<<endl;
+    }
+    }while(password2!=conf_pass);
+    cout <<endl;
+
+    //generation of travel id
+    srand(time(0));
+    int  id =10000000+(rand()%9999999);
+    cout <<"Your travel ID is : "<<id;
+
+}
+
+//recieves user defined feedback of the program
+
+void suggestion(){
+	string suggest;
+    	cout <<"Drop your feedback : "<<endl;
+        //getline function to input the feedback of user 
+        cin.ignore();
+	getline(cin,suggest);
+
+
+	cout <<endl<<"Thanks for your response."<<endl;
+}
+
+//stores user defined remarks
+
+void feedback(){
+	int feed;
+	string rating[]={"Excellent","Good","Satisfactory","Okay"};
+	cout<<"Please share your experience below."<<endl;
+	for(int i=0;i<4;i++){
+		cout<<i+1<<") "<<rating[i]<<endl;
+	}
+	cout<<"    ";
+    cout <<"Please enter : ";
+	cin>>feed;
+	while (feed < 1 || feed > 4) {
+        cout << "Invalid input!"<<endl;
+		cout<<" Please enter a number between 1 and 4: ";
+        cin >> feed;
+    }
+    //selection of reviews
+	switch(feed){
+		case 1:
+		cout<<"EXCELLENT"<<endl;
+		break;
+		case 2:
+		cout<<"Good"<<endl;
+		break;
+		case 3:
+		cout<<"Satisfactory"<<endl;
+		break;
+		case 4:
+		cout<<"Okay"<<endl;
+		break;
+	}
+	cout<<endl;
+	
+    suggestion();
+	
+}
+
+
+int main(){
+    //declarations
+    int ans,price12;
+    int opt;
+    string log,user_name,user2,password2,conf_pass;
+    int password,cost_hour,departure,arrival,total_cost,type;
+    int luggagecost=0;
+
+    //opening lines
+    cout <<endl<<"Welcome to KAMRA INTERNATIONAL AIRLINES.\n";
+    cout <<"Explore effortless travel management and seamless experiences.\n"<<endl;
+
+    // Function calling starts from here
+   do
+   {
+    //ask the user to login
+
+    cout <<"If you have an account then login else sign up.\n login/sign up"<<endl;
+    getline(cin,log);
+
+    if(log =="login" || log=="log in"){
+        //login function called
+        prof(user_name,password);
+       
+    }
+    else if(log =="signup" || log=="sign up"){
+       //signup function called here
+        signp(user2,password2,conf_pass);
+    }
+   }while(log!="login"&&log!="signup"&&log!="sign up");
+    cout<<endl;
+    //operations for cargo flight
+     cout <<"\n1. Book a Passenger's flight \n2. Transport goods as cargo "<<endl;
+    cout <<"Please choose an option : ";
+    do
+    {
+    cin >>ans;
+    cout <<endl;
+
+    if(ans!=1&&ans!=2)
+    {
+        cout <<"Please enter from the given options : ";
+    }
+    }while(ans!=1&&ans!=2);
+
+    if(ans==1){
+      string list[10]={ "1. Pakistan","2. India" , "3. USA","4. England", "5. Qatar","6. UAE","7. China","8. Australia","9. Canada","10. Germany"};
+      for(int i=0;i<10;i++){
+        cout<<list[i]<<endl;
+      }
+    
+    //country of departure is taken as an input
+    cout<<"ENTER THE COUNRY OF DEPARTURE :\t";
+    do
+    {
+    cin>>departure;
+    if(departure>10||departure<1)
+    {
+        cout <<"Enter from the given options :";
+    }
+    }while(departure>10||departure<1);
+    cout<<list[departure-1]<<endl;
+
+    
+    do
+    {
+        //country of arrival is taken as an input
+    cout<<"ENTER THE COUNTRY OF ARRIVAL :\t";
+    do
+    {
+    cin>>arrival;
+    if(arrival>10||arrival<1)
+    {
+        cout <<"Enter from the given options :";
+    }
+    }while(arrival>10||arrival<1);
+    cout<<list[arrival-1]<<endl;
+ 
+    if(departure==arrival){
+        cout<<"The departure and arrival country should be different! "<<endl;
+     }
+    }while(departure==arrival);
+    
+    // function for flight timings called here
+    flights_schedule();
+    int type;
+
+    //display of classes 
+    cout <<"CLASSES :"<<endl<<endl;
+    cout<<"1- ECONOMY CLASS\t($125/hour) "<<endl;
+    cout<<"2- PREMIUM CLASS\t($160/hour) "<<endl;
+    cout<<"3- BUSSINESS CLASS\t($180/hour) "<<endl;
+    cout<<"4- FIRST CLASS \t\t($200/hour) "<<endl;
+    cout<<"CHOOSE THE TYPE OF CLASS YOU WANT TO TRAVEL IN : ";
+
+    //taking the chosen class as an input
+    do
+    {
+    cin>>type;
+    if(type<=0||type>4)
+    {
+        cout <<"Please select from the given : ";
+    }
+    }while(type<=0||type>4);
+    cout <<endl;
+	
+    //function for adjusting cost_hour according to chosen class
+    section(&cost_hour,type);
+    
+    //this function calculates the ticketprice without luggage price addition
+   int total_cost= cost(departure,arrival,cost_hour);
+cout <<endl;
+
+cout <<"LUGGAGE SECTION : "<<endl<<endl;
+
+//function for returning luggage cost is called here
+     luggagecost=luggage(type);
+
+     //total payable price calculation
+     int finalprice=(luggagecost+total_cost);
+     cout <<endl;
+     cout<<"The Total Payable Price is : \t";
+     cout<<"$ "<<finalprice<<endl;
+     
+    }
+     else if(ans==2)
+     {
+       //final price for cargo flight is returned by this function 
+        price12=cargo();
+     }
+    cout <<endl<<"FEEDBACK : "<<endl<<endl;
+
+    //function for feedback input is called here
+      feedback();
+
+        return 0;  
+     }
