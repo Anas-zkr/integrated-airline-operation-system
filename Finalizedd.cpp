@@ -1205,7 +1205,7 @@ int prof(string user_name, int password)
         srand(time(0));
         id =10000000+(rand()%9999999);
         cout <<"\t";cin>>user_name;
-        string *a=&user_name;
+        
         if(user_name=="hamza" || user_name=="abdulrehman" || user_name=="mudassar" || user_name=="anas"){
             if(user_name=="hamza"){
             do{
