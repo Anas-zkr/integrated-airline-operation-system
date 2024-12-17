@@ -7,6 +7,19 @@
 #include<cstdlib>
 using namespace std;
 
+// Function prototype
+
+int cost(int departure, int arrival, int cost_hour);
+void flights_schedule();
+int section(int *cost_hour, int type);
+int cargo();
+int luggage(int type);
+int prof(string user_name, int password);
+void signp(string name, string password2, string conf_pass);
+void suggestion();
+void feedback();
+
+
 //THIS FUNCTION MANAGES ALL THE COST CALCULATIONS IN ACCORDANCE TO TRAVELLING HOURS.
 int cost(int departure,int arrival,int cost_hour){
 int total_cost;
