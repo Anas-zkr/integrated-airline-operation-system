@@ -1405,7 +1405,7 @@ int main(){
    {
     //ask the user to login
 
-    cout <<"\t\t If you have an account then login else sign up.\n \t\t login/sign up"<<endl;
+    cout <<" If you have an account then login else sign up.\n login/sign up"<<endl;
     getline(cin,log);
 
     if(log =="login" || log=="log in"){
