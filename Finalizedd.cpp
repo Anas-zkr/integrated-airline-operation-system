@@ -1397,15 +1397,15 @@ int main(){
     int luggagecost=0;
 
     //opening lines
-    cout <<endl<<"Welcome to KAMRA INTERNATIONAL AIRLINES.\n";
-    cout <<"Explore effortless travel management and seamless experiences.\n"<<endl;
+    cout <<endl<<"\t \t \t\tWelcome to KAMRA INTERNATIONAL AIRLINES.\n";
+    cout <<"\t \t \t\tExplore effortless travel management and seamless experiences.\n"<<endl;
 
     // Function calling starts from here
    do
    {
     //ask the user to login
 
-    cout <<"If you have an account then login else sign up.\n login/sign up"<<endl;
+    cout <<"\t\t If you have an account then login else sign up.\n \t\t login/sign up"<<endl;
     getline(cin,log);
 
     if(log =="login" || log=="log in"){
